@@ -27,10 +27,6 @@ const proxyTable = {
     //     target: 'https://lavas.baidu.com',
     //     changeOrigin: true
     // }
-    '/api':{
-        target:'https://lavas.baidu.com',
-        changeOrigin:true
-    }
 };
 
 let port = process.env.PORT || 3000;
