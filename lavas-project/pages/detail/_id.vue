@@ -19,6 +19,7 @@ Fast - Respond quickly to user interactions with silky smooth animations and no 
 </template>
 
 <script>
+import axios from 'axios';
 	export default{
 		name:'detail-_id',
 		mateInfo(){
@@ -30,6 +31,11 @@ Fast - Respond quickly to user interactions with silky smooth animations and no 
 					{name:'description',content:`Lavas Sample Detail ${this.$route.params.id}`}
 				]
 			}
+		},
+		async asyncData(){
+			let result = await axios(`https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%202151849&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys`);
+			let condition = result.data.query.results.channel.item.condition;
+			console.log(`Weather of Shanghai:${condition.text},${condition.temp}°F`)
 		}
 	}
 </script>
