@@ -16,6 +16,9 @@ const workboxSW = new WorkboxSW({
 // Define precache injection point.
 workboxSW.precache([]);
 
+workboxSW.router.registerNavigationRoute('/appshell');
+workboxSW.router.registerRoute(new RegExp('https://query\.yahooapis\.com/v1/public/ypl'),workboxSW.strategies.networkFirst());
+
 /**
  * example runningCache with api
  */
