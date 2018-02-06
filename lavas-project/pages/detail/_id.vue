@@ -14,7 +14,7 @@
 Reliable - Load instantly and never show the downasaur, even in uncertain network conditions.
 Fast - Respond quickly to user interactions with silky smooth animations and no janky scrolling.</p>
 			<router-link to="/">Back to home</router-link>
-			<p>上海今天的天气：{{this.weather.text}}，{{this.weather.temp}}°F</p>
+			<p>HAHAHAHAHAHHAHA</p>
 		</article>
 	</div>
 </template>
